@@ -24,12 +24,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+//네비게이션바 설정하기
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.frameLayout, fragmentDiagonsis).commitAllowingStateLoss();
-
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigationView);
         bottomNavigationView.setOnItemSelectedListener(new ItemSelectedListener());
+//다음
         button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+//네비게이션 바 클릭시 레이아웃 옮겨지는 부분
     class ItemSelectedListener implements BottomNavigationView.OnItemSelectedListener{
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -59,5 +60,5 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
     }
-
+//끝
 }
