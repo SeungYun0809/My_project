@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <Button
+            android:text="질문에 답변이 달렸습니다.\n(비숑 프리제 / 3세)"
+            android:gravity="left"
+            android:layout_width="295dp"
+            android:layout_height="60dp" android:id="@+id/button3"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:backgroundTint="#F6F4F9" android:textColor="#1E2C7B" android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.497" app:layout_constraintVertical_bias="0.167"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
