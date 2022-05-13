@@ -20,13 +20,14 @@ public class MainActivity extends AppCompatActivity {
     private FragmentDiagonsis fragmentDiagonsis = new FragmentDiagonsis();
     private FragmentAlarm fragmentAlarm = new FragmentAlarm();
     private FragmentMyPage fragmentMyPage = new FragmentMyPage();
+    private FragmentMain fragmentMain = new FragmentMain();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //네비게이션바 설정하기
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.frameLayout, fragmentDiagonsis).commitAllowingStateLoss();
+        transaction.replace(R.id.frameLayout, fragmentMain).commitAllowingStateLoss();
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigationView);
         bottomNavigationView.setOnItemSelectedListener(new ItemSelectedListener());
 //다음
@@ -47,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
 
             switch(menuItem.getItemId())
             {
+                case R.id.invisible:
+                    transaction.replace(R.id.frameLayout, fragmentMain).commitAllowingStateLoss();
                 case R.id.Diagnosis:
                     transaction.replace(R.id.frameLayout, fragmentDiagonsis).commitAllowingStateLoss();
                     break;

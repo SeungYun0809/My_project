@@ -14,4 +14,10 @@
             android:id="@+id/MyPage"
             android:icon="@android:drawable/ic_menu_info_details"
             android:title="마이페이지" />
+    <item
+            android:id="@+id/invisible"
+            android:visible="false"
+            android:icon="@android:drawable/ic_menu_zoom"
+            android:title="account" />
+
 </menu>
