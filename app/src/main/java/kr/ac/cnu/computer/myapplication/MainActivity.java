@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.frameLayout, fragmentMain).commitAllowingStateLoss();
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigationView);
+        bottomNavigationView.setSelectedItemId(R.id.invisible);
         bottomNavigationView.setOnItemSelectedListener(new ItemSelectedListener());
 //다음
         button = (Button) findViewById(R.id.button);
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 case R.id.invisible:
                     transaction.replace(R.id.frameLayout, fragmentMain).commitAllowingStateLoss();
+                    break;
                 case R.id.Diagnosis:
                     transaction.replace(R.id.frameLayout, fragmentDiagonsis).commitAllowingStateLoss();
                     break;
