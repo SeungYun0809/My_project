@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+              android:layout_height="match_parent" android:orientation="vertical">
+
+    <TextView
+            android:text="답변이 등록되었습니다\n등록된 답변은 질문자에게 전달됩니다."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView5" android:textSize="20sp"
+            android:textStyle="bold" android:textColor="#25379A" android:gravity="center"
+            android:layout_marginTop="260dp"/>
+    <Button
+            android:text="메인화면으로"
+            android:layout_width="120dp"
+            android:layout_height="50dp" android:id="@+id/button4" app:backgroundTint="#25379A"
+            android:layout_gravity="center_horizontal" android:layout_marginTop="26dp" android:textSize="15sp"
+            android:textStyle="bold"/>
+</LinearLayout>
