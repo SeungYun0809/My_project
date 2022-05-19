@@ -4,23 +4,23 @@ import android.content.Intent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+
 public class MainActivity extends AppCompatActivity {
     Button button;
+    private static final String TAG = "MainActivity";
     private FragmentManager fragmentManager = getSupportFragmentManager();
     private FragmentDiagonsis fragmentDiagonsis = new FragmentDiagonsis();
     private FragmentAlarm fragmentAlarm = new FragmentAlarm();
     private FragmentMyPage fragmentMyPage = new FragmentMyPage();
     private FragmentMain fragmentMain = new FragmentMain();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,12 +32,14 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setSelectedItemId(R.id.invisible);
         bottomNavigationView.setOnItemSelectedListener(new ItemSelectedListener());
 //다음
+
         button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
                 startActivity(intent);
+
             }
         });
     }
@@ -51,19 +53,23 @@ public class MainActivity extends AppCompatActivity {
             {
                 case R.id.invisible:
                     transaction.replace(R.id.frameLayout, fragmentMain).commitAllowingStateLoss();
+                    button.setVisibility(View.GONE);
                     break;
                 case R.id.Diagnosis:
                     transaction.replace(R.id.frameLayout, fragmentDiagonsis).commitAllowingStateLoss();
+                    button.setVisibility(View.GONE);
                     break;
                 case R.id.Alarm:
                     transaction.replace(R.id.frameLayout, fragmentAlarm).commitAllowingStateLoss();
+                    button.setVisibility(View.GONE);
                     break;
                 case R.id.MyPage:
                     transaction.replace(R.id.frameLayout, fragmentMyPage).commitAllowingStateLoss();
+                    button.setVisibility(View.GONE);
                     break;
             }
             return true;
         }
     }
-//끝
+
 }
