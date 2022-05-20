@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "937323349114",
+    "project_id": "helical-analogy-349412",
+    "storage_bucket": "helical-analogy-349412.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937323349114:android:6d0785e54bff932def27c3",
+        "android_client_info": {
+          "package_name": "kr.ac.cnu.computer.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "937323349114-d2naoal9qoehht46dlmtifk0fgte2av3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9YsX7Lui_G_-k4XEo0rQUsldUB3I62FU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "937323349114-d2naoal9qoehht46dlmtifk0fgte2av3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
